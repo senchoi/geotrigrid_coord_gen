@@ -1,7 +1,7 @@
 clear;
 
 function sequence = generate_sequence(num_elements)%1,2,2,3,3...
-    sequence = [1];  % 1은 한 번만 추가
+    sequence = [1];  % add 1 only once at the beginning
     remaining_elements = num_elements - 1;
     i = 2;
     
@@ -471,7 +471,7 @@ clear lists;
 %     groupcounts(cylz(:,9)),groupcounts(cyla(:,10)),...
 %     groupcounts(cylb(:,11)),groupcounts(cylc(:,12))];
 
-%% The ALGORITHM
+%% The ALGORITHM(alg_shortest)
 function answer=alg_shortest(x1,y1,x2,y2,n)
     source=[x1,y1];
 destination=[x2,y2];
@@ -508,7 +508,7 @@ else
 end
 end
 
-%% finding all pairs
+%% finding all pairs - This takes a lot of memories
 pair_indices = nchoosek(1:size(all_coords, 1), 2);
 
 % Use the indices to get the coordinate pairs
